@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-  margin: 40px 40px;
+//.container {
+//  margin: 0 auto;
+//}
+
+body {
+  margin:0;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -20,6 +24,10 @@ h1 {font-size:48px;}
 h2 {font-size:36px;}
 h3 {font-size:24px;}
 
+hr {
+    border-top: 1px solid rgba(0,0,0,.5);
+}
+
 nav { box-shadow: 0 6px 14px 0 rgba(0,0,0,0.35);}
 
 nav a:hover {
@@ -32,6 +40,29 @@ nav a:hover {
 
 .navbar-toggler {
   background-color: #dbaf62;
+}
+
+.row {
+  justify-content: space-around;
+}
+
+.rowflex {
+  flex:1;
+  flex-wrap: wrap;
+  min-width: 250px;
+  padding: 0 0.5em;
+}
+
+.rowtext {
+  text-align:left;
+}
+
+img {
+  padding:45px 0;
+}
+
+.space {
+  margin-top: 60px;
 }
 
 footer {
