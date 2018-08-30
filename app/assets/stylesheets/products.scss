@@ -2,10 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+tr {
+  margin:.5em;
+  background-color: #fff;
+  border: solid 1px #eee;
+}
 
+td {
+  border: solid 1px #eee;
+}
+
+.row {
+  justify-content: space-around;
+}
 
 .rowflex {
   flex:1;
-  justify-content: space-between;
-  text-align: center;
+  flex-wrap: wrap;
+  min-width: 250px;
+  padding: 0 0.5em;
+}
+
+.rowtext {
+  text-align:left;
+}
+
+img {
+  padding:45px 0;
+}
+
+.img-preimage {
+  height: 20%;
+  padding: 0;
+}
+
+.space {
+  margin-top: 60px;
 }
