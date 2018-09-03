@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 tr {
   margin:.5em;
   background-color: #fff;
@@ -32,10 +33,33 @@ img {
 }
 
 .img-preimage {
-  height: 20%;
+  height: 100px;
   padding: 0;
 }
 
 .space {
   margin-top: 60px;
+}
+
+.title-align {
+  flex:1 0 30%;
+  margin:5px;
+  text-align:center;
+  padding-top:40px;
+  min-height:360px;
+  background-color: #eee;
+  border:1px solid #eee;
+}
+
+.title-align--product {
+  display:inline-block;
+  font-size: 36px;
+  padding-bottom:36px;
+}
+
+.price-tag {
+  display:inline-block;
+  font-size:24px;
+  font-weight: 700;
+  margin-top:30px;
 }
