@@ -1,1 +1,21 @@
 This displays the orders/index.html.erb file
+<div class="container">
+<h2>List of Orders</h2>
+
+<table>
+  <tr>
+    <th>Order ID</th>
+    <th>Product</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  <% @orders.each do |order| %>
+  <tr>
+    <td># <%= order.id %></td>
+    <td><%= link_to order.product.name, order %></td>
+    <td><%= order.product.description %></td>
+    <td>€ <%= order.product.price %></td>
+  <% end %>
+  </tr>
+</table>
+</div>

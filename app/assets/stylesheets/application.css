@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+th {
+  width:30%;
+}
+
+th:nth-child(even) {
+  width:10%;
+}
