@@ -11,32 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="form-group container-fluid">
+  <div class="field from-control-lt">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="field from-control-lt">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
 
-  <div class="field">
+  <div class="field from-control-lt">
   <%= form.label :color %>
   <%= form.text_field :color %>
   </div>
 
-  <div class="field">
+  <div class="field from-control-lt">
     <%= form.label :image_url %>
     <%= form.text_field :image_url %>
   </div>
 
-  <div class="field">
+  <div class="field from-control-lt">
     <%= form.label :price %>
     <%= form.text_field :price %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="action">
+    <%= form.submit class: "btn btn-info" %>
   </div>
+</div>
 <% end %>

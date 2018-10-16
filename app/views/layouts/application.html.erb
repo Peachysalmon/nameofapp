@@ -27,6 +27,12 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
+          <li class="form-control form-inline">
+              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search', class: "btn btn-info btn-search"%>
+              <% end %>
+          </li>
           <li class="nav-item nav-link active">
             <%= link_to "Home", simple_pages_index_path %>
           </li>

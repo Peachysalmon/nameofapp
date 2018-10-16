@@ -21,3 +21,30 @@ th {
 th:nth-child(even) {
   width:10%;
 }
+
+
+.form-control {
+  background-color: #333A40;
+  border:none;
+}
+
+.btn-search {
+  font-size: 0.8em;
+}
+
+.from-control-lt {
+  background-color: #fff;
+}
+
+/* input {
+  width:50%;
+} */
+
+textarea {
+  width:50%;
+  min-height:100px;
+}
+
+.field>label {
+  font-weight: 700;
+}
