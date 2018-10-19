@@ -63,11 +63,24 @@
       </div>
     </nav>
     <div  class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id="notice_wrapper">
+    <% if notice %>
+    <p class="alert alert-success" role="alert"><%= notice %></p>
+    </div>
+    <div id="notice_wrapper">
+    <% elsif alert %>
+    <p class="alert alert-danger" role="alert"><%= alert %></p>
+    </div>
+    <% end %>
+
 
     <%= yield %>
   </div>
+<script>
+$(document).ready(function(){
+  $('.alert').delay(800).fadeIn(400);
+});</script>
+
   </body>
   <footer>
   &copy; 2018 Bike Berlin
