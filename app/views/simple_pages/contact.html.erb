@@ -17,11 +17,11 @@
       <div>
         <div class="field form-group">
           <%= form.label :name %>
-          <%= form.text_field :name, class: "form-control-lt", placeholder: "Enter Name" %>
+          <%= form.text_field :name, class: "form-control-lt", placeholder: "Enter Name", :required => true %>
         </div>
         <div class="field form-group">
           <%= form.label :email %>
-          <%= form.text_field :email, class: "form-control-lt", placeholder: "Enter Email" %>
+          <%= form.text_field :email, class: "form-control-lt", placeholder: "Enter Email", :required => true %>
         </div>
         <div class="field form-group">
           <%= form.label :message %>
