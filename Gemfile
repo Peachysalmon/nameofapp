@@ -64,3 +64,6 @@ end
 
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'
+
+# cancancan authorization gem
+gem 'cancancan', '~> 2.0'
