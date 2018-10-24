@@ -38,8 +38,20 @@
   </div>
   <div class="rowflex">
     <div class="rowtext">
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Back', products_path %>
+      <%= link_to 'Edit', edit_product_path(@product),class: "btn btn-info" %>
+      <%= link_to 'Back', products_path, class: "btn btn-info" %>
+    </div>
+  </div>
+</div>
+  <div class="row space">
+    <div class="rowtext">
+      <h3>Reviews</h3>
+      highest rating text:
+      <%= @product.highest_rating_comment.body %><br>
+      lowest rating text:
+      <%= @product.lowest_rating_comment.body %><br>
+      newest rating text:
+      <%= @product.newest_rating_comment.body %>
     </div>
   </div>
 </div>

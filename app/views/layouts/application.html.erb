@@ -48,13 +48,39 @@
           <li class="nav-item nav-link">
             <%= link_to "Orders", orders_path %>
           </li>
+        </ul>
+        <ul class="navbar-nav">
+          <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link lt-font") %>
+          </li>
+          <% else %>
+          <li class="nav-item">
+            <%= link_to('Login', new_user_session_path, class: "nav-link lt-font") %>
+          </li>
+          <% end %>
+        </ul>
       </div>
     </nav>
     <div  class="container">
+    <div id="notice_wrapper">
+    <% if notice %>
+    <p class="alert alert-success" role="alert"><%= notice %></p>
+    </div>
+    <div id="notice_wrapper">
+    <% elsif alert %>
+    <p class="alert alert-danger" role="alert"><%= alert %></p>
+    </div>
+    <% end %>
 
 
     <%= yield %>
   </div>
+<script>
+$(document).ready(function(){
+  $('.alert').delay(800).fadeIn(400);
+});</script>
+
   </body>
   <footer>
   &copy; 2018 Bike Berlin

@@ -48,3 +48,32 @@ textarea {
 .field>label {
   font-weight: 700;
 }
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    border:1px solid #eee;
+    box-shadow: 15px 15px 15px 0px rgb(173,173,173);
+    -webkit-box-shadow: 15px 15px 15px 0px rgb(173,173,173);
+    -moz-box-shadow: 15px 15px 15px 0px rgb(173,173,173);
+}
+
+.form-signin-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.field_fw>input {
+  width:90%;
+  margin-bottom: 30px;
+}
+
+.field_fw>label {
+  margin-bottom: .1em;
+}
+
+.lt-font {
+  color:#fff!important;
+}
