@@ -67,3 +67,5 @@ gem 'devise'
 
 # cancancan authorization gem
 gem 'cancancan', '~> 2.0'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'

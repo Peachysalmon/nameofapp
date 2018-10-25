@@ -2,6 +2,7 @@
 <div class="row">
   <div class="rowflex">
     <%= image_tag(@product.image_url, class: "img-fluid") %>
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
   </div>
 </div>
 <hr>
@@ -45,6 +46,10 @@
     </div>
   </div>
   <div class="review">
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
+  </div>
+<!--  <div class="review">
     <h1>Reviews</h1>
       <div class="review-body">
         Highest rating review comment: <%= @product.highest_rating_comment %>
@@ -52,5 +57,5 @@
       <div class="review-body">
         Lowest rating review comment: <%= @product.lowest_rating_comment %>
       </div>
-  </div><!-- review end -->
+  </div><!-- review end -->-->
 </div><!-- container end -->
