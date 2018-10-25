@@ -13,6 +13,10 @@ td {
   border: solid 1px #eee;
 }
 
+.container {
+  margin-bottom:150px;
+}
+
 .row {
   justify-content: space-around;
 }
@@ -75,4 +79,13 @@ img {
   margin:45px 0px;
   font-size:1.5em;
   text-decoration: underline;
+}
+
+.pagination>em, a {
+  margin:0px 5px;
+}
+
+.current {
+  font-weight:700;
+  font-size:1em;
 }

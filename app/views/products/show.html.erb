@@ -48,6 +48,7 @@
   <div class="review">
     <%= render 'new_comment' %>
     <%= render 'comments' %>
+    <%= will_paginate @comments %>
   </div>
 <!--  <div class="review">
     <h1>Reviews</h1>
@@ -56,6 +57,6 @@
       </div>
       <div class="review-body">
         Lowest rating review comment: <%= @product.lowest_rating_comment %>
-      </div>
-  </div><!-- review end -->-->
+      </div>-->
+  </div><!-- review end --> 
 </div><!-- container end -->
