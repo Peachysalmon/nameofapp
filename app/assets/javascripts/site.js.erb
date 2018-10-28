@@ -7,9 +7,9 @@ $(document).on('turbolinks:load', function(){
   });
 
   $('.rated').raty({
-    starHalf: '<%= image_url 'star-half.png' %>',
-    starOff: '<%= image_url 'star-off.png' %>',
-    starOn: '<%= image_url 'star-on.png' %>',
+    starHalf: '<%= image_url "star-half.png" %>',
+    starOff: '<%= image_url "star-off.png" %>',
+    starOn: '<%= image_url "star-on.png" %>',
     readOnly: true,
     score: function() {
       return $(this).attr('data-score');
