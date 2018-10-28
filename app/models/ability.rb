@@ -51,8 +51,8 @@ end
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #  end
 #end
-=======
->>>>>>> 30476a70fb8bdcf6395d2d2cd22106fcb777e26a
+#=======
+#>>>>>>> 30476a70fb8bdcf6395d2d2cd22106fcb777e26a
