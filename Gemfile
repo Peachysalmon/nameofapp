@@ -73,8 +73,6 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.1.1'
 
-gem 'ratyrate'
-
 # rpesc testing tool gem
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
