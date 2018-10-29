@@ -12,6 +12,10 @@ describe Product do
 end
 
     it "returns the average rating of all comments" do
-      expect(product.comments.average_rating).to eq 3
+      expect(product.average_rating).to eq 3.0
+    end
+
+    it "is not valid without a name" do
+      expect(Product.new(description: "Nice Bike")).not_to be_valid
     end
 end

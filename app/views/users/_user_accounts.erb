@@ -1,0 +1,49 @@
+<div class="container user-id">
+
+  <p>You are currently logged in as:</p>
+  <strong><%= current_user.first_name %> <%= current_user.last_name %></strong>
+  <p></p>
+  <p>User ID:</p>
+  <strong><%= current_user.id %></strong>
+  <p></p>
+  <p>Mail:</p>
+  <strong><%= current_user.email %></strong>
+  <p></p>
+  <% if current_user.admin? %>
+  <p></p>
+  <p>Role: <strong>Admin</strong></p>
+  <% else %>
+  <p>Role: <strong>User</strong></p>
+  <% end %>
+  <p></p>
+  <button class="btn btn-info"><%= link_to 'Edit Account', edit_user_path(current_user) %></button>
+</div>
+
+<% if current_user.admin? %>
+<h2>Here is a List of all registered users </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>User ID</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.id %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'New User', new_user_path %>
+  <% end %>

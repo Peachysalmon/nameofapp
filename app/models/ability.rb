@@ -8,15 +8,9 @@ class Ability
     elsif user.admin?
       can :manage, :all
     else
-      can :manage, User, id: user.id
+      can :read, User, id: user.id
 
-      can :manage, Comment.where(user_id: user.id) do |comment|
-        comment.user_id == user.id
-      end
-
-      cannot [:destroy, :delete], Comment.where(user_id: user.id) do |comment|
-        comment.user_id == user.id
-      end
+      can :manage, Order, user_id: user.id
     end
   end
 end

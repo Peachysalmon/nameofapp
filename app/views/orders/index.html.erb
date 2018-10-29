@@ -8,6 +8,7 @@ This displays the orders/index.html.erb file
     <th>Product</th>
     <th>Description</th>
     <th>Price</th>
+    <th>User</th>
   </tr>
   <% @orders.each do |order| %>
   <tr>
@@ -15,7 +16,9 @@ This displays the orders/index.html.erb file
     <td><%= link_to order.product.name, order %></td>
     <td><%= order.product.description %></td>
     <td>€ <%= order.product.price %></td>
+    <td><%= order.user.first_name %> <%= order.user.last_name %></td>
   <% end %>
-  </tr>
 </table>
 </div>
+
+<%= render 'user_order' %>

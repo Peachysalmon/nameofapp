@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource :only =>[:destroy]
 def create
   @product = Product.find(params[:product_id])
   @comment = @product.comments.new(comment_params)
@@ -16,7 +17,7 @@ def create
 end
 
 def destroy
-  @comment = Comment.find(param[:id])
+  @comment = Comment.find(params[:id])
   product = @comment.product
   @comment.destroy
   redirect_to product
