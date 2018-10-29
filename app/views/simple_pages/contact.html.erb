@@ -7,7 +7,6 @@
 
 <h1>Contact Us</h1>
 
-<<<<<<< HEAD
 <%= flash[:notice] %>
 
 <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
@@ -23,7 +22,6 @@
   <div class="form-group">
     <%= form.label :message %>
     <%= form.text_area :message, class: "form-control-lt", placeholder: "Enter Message", rows: 5 %>
-=======
       <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
       <div>
         <div class="field form-group">
@@ -42,7 +40,6 @@
       <%= form.submit "Send", class: "form_label btn btn-info" %>
       <% end %>
     </div>
->>>>>>> e58862e0f1e84ade98b08798d04d936a2d3bb6a1
   </div>
 </div>
 <%= form.submit "Send", class: "form_label" %>
