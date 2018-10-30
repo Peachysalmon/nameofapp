@@ -1,8 +1,11 @@
 class OrdersController < ApplicationController
 before_action :authenticate_user!
   def index
-    @orders = Order.includes(:product, :user).all
-    @orders.user = current_user.includes(:product, :user).all
+    if current_user.admin?
+      @orders = Order.includes(:product, :user).all
+    else
+      @orders = Order.where(user_id: current_user.id)
+    end
   end
 
   def show
