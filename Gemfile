@@ -77,3 +77,6 @@ gem 'will_paginate', '~> 3.1.1'
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
 end
+
+# functional testing tool , test controller
+gem 'rails-controller-testing'
