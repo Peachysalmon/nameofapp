@@ -80,3 +80,7 @@ end
 
 # functional testing tool , test controller
 gem 'rails-controller-testing'
+
+group :development, :test do
+  gem 'factory_bot_rails'
+end
