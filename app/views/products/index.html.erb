@@ -5,7 +5,7 @@
 
   <div class="container-fluid">
     <div class="row">
-        <%= render @products %>
+        <%= render @products.order(id: :asc) %>
     </div>
   </div>
 
