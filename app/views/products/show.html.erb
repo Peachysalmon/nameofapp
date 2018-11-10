@@ -2,11 +2,14 @@
 <div class="row">
   <div class="rowflex">
     <%= image_tag(@product.image_url, class: "img-fluid") %>
-    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+    <%= form_with(url: '/payments/create') do |form| %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
   </div>
 </div>
 <hr>
-<div class="container>">
+<div class="container">
   <div class="row space">
     <div class="rowflex">
       <div class="rowtext">
@@ -35,7 +38,7 @@
     <div class="rowflex">
       <div class="rowtext">
         <p class="section-title">Price:</p>
-        <p><%= @product.price %> €</p>
+        <p><%= number_to_currency(@product.price, :unit => "€") %></p>
       </div>
     </div>
     <div class="rowflex">
