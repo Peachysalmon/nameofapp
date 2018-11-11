@@ -47,6 +47,7 @@
         <%= link_to 'Back', products_path %>
       </div>
     </div>
+    <% logger.debug "Product: #{@product.name}"%>
   </div>
   <div class="review">
     <%= render 'new_comment' %>

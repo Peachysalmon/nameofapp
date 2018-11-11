@@ -92,4 +92,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: 'jons-bike-berlin-demo.herokuapp.com' }
+
+  # logger setup for production environment
+  Rails.logger.level = 2
 end
