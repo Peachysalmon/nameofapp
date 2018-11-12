@@ -3,7 +3,7 @@
    <p><%= product.description.first(80) %>...</p>
    <p>Color: <%= product.color %></p>
     <%= image_tag(product.image_url, class: "img-preimage") %><br>
-   <div class="price-tag"><%= number_to_currency(product.price) %> €</div>
+   <div class="price-tag"><%= number_to_currency(product.price, :unit => "€") %> €</div>
    <div style="margin:30px;">
      <button class="btn btn-light"><%= link_to 'Show', product %></button>
      <% if signed_in? && current_user.admin? %>
