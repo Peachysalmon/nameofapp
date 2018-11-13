@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
@@ -27,6 +28,10 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    if current_user.admin?
+    else
+      redirect_to products_path
+    end
   end
 
   # POST /products
