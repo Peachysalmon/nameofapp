@@ -3,7 +3,7 @@
   <div class="rowflex">
     <%= image_tag(@product.image_url, width: "600px", class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
 
-    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+    <p>Average Rating: <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>" ></div></p>
     <%= form_with(url: '/payments/create') do |form| %>
       <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
