@@ -12,6 +12,7 @@
 <hr>
 <div class="container">
   <div class="row space">
+    <% cache @product do %>
     <div class="rowflex">
       <div class="rowtext">
         <p class="section-title">Name:</p>
@@ -48,6 +49,7 @@
         <%= link_to 'Back', products_path %>
       </div>
     </div>
+    <% end %>
     <% logger.debug "Product: #{@product.name}"%>
   </div>
   <div class="review">
