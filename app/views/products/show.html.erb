@@ -52,7 +52,9 @@
     <% end %>
     <% logger.debug "Product: #{@product.name}"%>
   </div>
+
   <div class="review">
+    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
     <%= render 'new_comment' %>
     <%= render 'comments' %>
     <%= will_paginate @comments %>
