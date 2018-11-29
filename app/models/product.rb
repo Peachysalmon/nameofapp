@@ -7,7 +7,7 @@ class Product < ApplicationRecord
       Product.where("name LIKE ?", "%#{search_term}%")
     end
   end
-  has_many :comments
+  has_many :comments, :dependent => :destroy
   def highest_rating_comment
     comments.rating_desc.first
   end
